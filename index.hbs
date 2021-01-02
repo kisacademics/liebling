@@ -25,18 +25,20 @@ into the {body} of the default.hbs template --}}
 
 <main class="main-wrap">
   {{!-- Inject styles of the hero image to make it responsive --}}
-  {{> hero background=@site.cover_image}}
-  <div class="m-hero__content" data-aos="fade-down">
-    <h1 class="m-hero-title bigger">{{@site.title}}</h1>
-    {{#if @site.description}}
-      <p class="m-hero-description bigger">{{@site.description}}</p>
-    {{/if}}
-    {{#if @labs.subscribers}}
-      <a href="{{@site.url}}/subscribe" class="m-button filled">{{t "Subscribe"}}</a>
-    {{/if}}
-    {{#if @labs.members}}
-      <a href="{{@site.url}}/newsletter" class="m-button filled">{{t "Subscribe"}}</a>
-    {{/if}}
+  {{> hero background=@site.cover_image class="align-left"}}
+  <div class="l-wrapper">
+    <div class="m-hero__content" data-aos="fade-down">
+      <h1 class="m-hero-title bigger">{{@site.title}}</h1>
+      {{#if @site.description}}
+        <p class="m-hero-description bigger">{{@site.description}}</p>
+      {{/if}}
+
+      {{#if @labs.members}}
+        <p class="m-hero-description bigger">
+          <a href="{{@site.url}}/newsletter" >{{t "Sign up to our newsletter"}}</a>
+        </p>
+      {{/if}}
+    </div>
   </div>
   </section>
   <div class="l-content">

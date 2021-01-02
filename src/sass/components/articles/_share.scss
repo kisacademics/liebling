@@ -1,3 +1,10 @@
+.gh-portal-triggerbtn-iframe {
+  margin-bottom: 45px;
+  @include respond-to('large') {
+    margin-bottom: auto;
+  }
+}
+
 .m-share {
   position: fixed;
   left: 0;

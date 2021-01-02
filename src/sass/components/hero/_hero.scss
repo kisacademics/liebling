@@ -12,6 +12,27 @@
     padding: 150px 0 75px;
   }
 
+  &.align-left {
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    .m-hero__content {
+      text-align: left;
+    }
+
+    .m-hero-title {
+      text-align: left;
+    }
+    .m-hero-description {
+      text-align: left;
+    }
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+
   &.with-picture {
     color: $white;
     background-color: $black;
